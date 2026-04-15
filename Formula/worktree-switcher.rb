@@ -5,21 +5,21 @@
 class WorktreeSwitcher < Formula
   desc "Interactive TUI for managing and switching between git worktrees"
   homepage "https://github.com/TrystanKaes/worktree-switcher"
-  version "0.0.2"
+  version "0.0.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/TrystanKaes/worktree-switcher/releases/download/v0.0.2/worktree-switcher_0.0.2_darwin_amd64.tar.gz"
-      sha256 "e60517352ab8daf1e550a88d6d7af1c0a43f49fcaebaf45be3e3fa70080db184"
+      url "https://github.com/TrystanKaes/worktree-switcher/releases/download/v0.0.3/worktree-switcher_0.0.3_darwin_amd64.tar.gz"
+      sha256 "6285ab3b4516bee3aa07b62a238f1b2cbbdeab69b83366eb2cbaa8dd75fa9970"
 
       define_method(:install) do
         bin.install "worktree-switcher"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/TrystanKaes/worktree-switcher/releases/download/v0.0.2/worktree-switcher_0.0.2_darwin_arm64.tar.gz"
-      sha256 "17f510f67a8c1fa3eeb303a30bdf6cc27f4962b43bbacafe8585d00ec86b14e8"
+      url "https://github.com/TrystanKaes/worktree-switcher/releases/download/v0.0.3/worktree-switcher_0.0.3_darwin_arm64.tar.gz"
+      sha256 "26ccca37ef85480965568872cf699d2e322a020bc9076c0df4ec0cae152edc51"
 
       define_method(:install) do
         bin.install "worktree-switcher"
@@ -29,8 +29,8 @@ class WorktreeSwitcher < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TrystanKaes/worktree-switcher/releases/download/v0.0.2/worktree-switcher_0.0.2_linux_amd64.tar.gz"
-      sha256 "6d2842cddfa0acc59567b1b0dcf3890c6ed054a2d62b63ab448ab33abaf4f0a1"
+      url "https://github.com/TrystanKaes/worktree-switcher/releases/download/v0.0.3/worktree-switcher_0.0.3_linux_amd64.tar.gz"
+      sha256 "ac68087c8189875e816db88abb623bca7df940741856607ed8d2b0ffce0a3116"
       define_method(:install) do
         bin.install "worktree-switcher"
       end
@@ -39,6 +39,9 @@ class WorktreeSwitcher < Formula
 
   def caveats
     <<~EOS
+      .
+      .
+      .
       To finish install add the following to your shell config
       (~/.zshrc, ~/.bashrc, or ~/.bash_profile):
 
@@ -50,6 +53,9 @@ class WorktreeSwitcher < Formula
       When you use worktree-switcher it runs as a subprocess and some of its most critical
       functions (i.e. cd'ing into directories) die with it. This is the same pattern used
       by rbenv, nvm, Zoxide, and many other popular tools.
+      .
+      .
+      .
     EOS
   end
 end
