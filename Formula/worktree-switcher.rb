@@ -5,21 +5,21 @@
 class WorktreeSwitcher < Formula
   desc "Interactive TUI for managing and switching between git worktrees"
   homepage "https://github.com/TrystanKaes/worktree-switcher"
-  version "0.0.3"
+  version "0.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/TrystanKaes/worktree-switcher/releases/download/v0.0.3/worktree-switcher_0.0.3_darwin_amd64.tar.gz"
-      sha256 "6285ab3b4516bee3aa07b62a238f1b2cbbdeab69b83366eb2cbaa8dd75fa9970"
+      url "https://github.com/TrystanKaes/worktree-switcher/releases/download/v0.1.0/worktree-switcher_0.1.0_darwin_amd64.tar.gz"
+      sha256 "51835ffc847d8050a58e18867c6a2251df847a9eb0595c5ab1a6954a8a1eac45"
 
       define_method(:install) do
         bin.install "worktree-switcher"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/TrystanKaes/worktree-switcher/releases/download/v0.0.3/worktree-switcher_0.0.3_darwin_arm64.tar.gz"
-      sha256 "26ccca37ef85480965568872cf699d2e322a020bc9076c0df4ec0cae152edc51"
+      url "https://github.com/TrystanKaes/worktree-switcher/releases/download/v0.1.0/worktree-switcher_0.1.0_darwin_arm64.tar.gz"
+      sha256 "109f6ca8e86958edfde17c50989df61f368b47099cf7528e5e29be87b334f1d0"
 
       define_method(:install) do
         bin.install "worktree-switcher"
@@ -29,8 +29,8 @@ class WorktreeSwitcher < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TrystanKaes/worktree-switcher/releases/download/v0.0.3/worktree-switcher_0.0.3_linux_amd64.tar.gz"
-      sha256 "ac68087c8189875e816db88abb623bca7df940741856607ed8d2b0ffce0a3116"
+      url "https://github.com/TrystanKaes/worktree-switcher/releases/download/v0.1.0/worktree-switcher_0.1.0_linux_amd64.tar.gz"
+      sha256 "0db989e96d2264fde65895d717f319382d04fbb122afc6f0c38d8ede48301379"
       define_method(:install) do
         bin.install "worktree-switcher"
       end
